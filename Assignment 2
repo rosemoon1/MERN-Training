@@ -58,3 +58,66 @@ convert();
 VM1277:19  Hy I Am Shravya
 
 
+/*Write a JS Function to validate Phone Number 
+Only number and must be 10 digit long*/
+
+function checks(n=0) {
+    n=n.toString();
+    if(n.length ==10){
+        for(i=0;i<n.length;i++){
+            if(!parseInt(n.charAt(i))){
+                return 'false';
+            }
+        }
+        return 'true';
+    }return 'false';
+}
+undefined
+checks(1234567898);
+'true'
+checks(124567898);
+'false'
+checks(12456f7898);
+
+
+/*Write a JS Function to validate Email Address
+Must contains @
+Must ends with .com/.org/.edu*/
+
+function checks(e='') {
+    if(e.includes('@')){
+        if(e.includes('.com') || e.includes('.org') || e.includes('.edu')){
+            return 'valid';
+        }
+        else return "unvalid";
+    }return 'unvalid';
+}
+undefined
+checks('shravya@.com')
+'valid'
+
+
+/*Write a JS Function to find the occurrence of each character in JS
+Input : “brain mentors”*/
+
+function count(s='') {
+    for(i=0;i<s.length;i++)
+        {
+            var c=0;
+            for(j=0;j<s.length;j++){
+                if(s.charAt(i)==s.charAt(j)){
+                    c++;
+                }
+            }
+            console.log(s.charAt(i) , c);
+        }
+}
+undefined
+count('sharvya');
+VM3070:13 s 1
+VM3070:13 h 1
+VM3070:13 a 2
+VM3070:13 r 1
+VM3070:13 v 1
+VM3070:13 y 1
+VM3070:13 a 2
