@@ -1,0 +1,60 @@
+/*Write a JavaScript function that Print Sum of Even Place and Odd Place Digit
+
+E.g num = 2914
+O/p Even Place (9+4)
+Odd Place 2+1*/
+
+function evenodd(s) 
+{
+    var e=0;
+    var o=0;
+    var a=s.toString();
+    var l=a.length;
+    for(var i=1;i<=l;i++)
+    {
+        if(i%2===0)
+        {
+        e=e+parseInt(a.charAt(i));
+        }
+    else
+        {
+        o=o+parseInt(a.charAt(i));
+        }
+    }
+    console.log('Even place',o);
+    console.log('Odd place',e);
+}
+undefined
+evenodd(1212);
+VM610:24 Even place 4
+VM610:25 Odd place 2
+
+
+/*Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
+Example string : ‘learn javascript from brain mentors’
+Expected Output : ‘Learn Javascript From Brain Mentors*/
+var s=prompt('enter string');
+function convert() {
+    s=" "+s;
+    s=s.toLowerCase();
+    var l=s.length;
+    var c='';
+    for(i=0;i<l;i++)
+        {
+        var ch=s.charAt(i);
+        if(ch==' '){
+            c=c+' ';
+            c=c+s.charAt(i+1).toUpperCase();
+            i++;
+        }
+            else{
+                c=c+ch;
+            }
+        }
+    console.log(c);
+}
+undefined
+convert();
+VM1277:19  Hy I Am Shravya
+
+
