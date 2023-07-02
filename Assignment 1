@@ -9,3 +9,57 @@ console.log("Current time is : "+ d.getHours() +":"+ d.getMinutes() +":"+ d.getS
 VM1256:7 Today is : Sunday
 VM1256:8 Current time is : 23:19:58
 undefined
+
+
+/*2.Write a JavaScript program to get the current date. Expected Output : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy*/
+
+var d=new Date();
+console.log(d.getMonth()+"-"+d.getDate()+"-"+d.getFullYear());
+
+VM1267:4 6-2-2023
+undefined
+
+
+/*3.WAP to print area and perimeter of rectangle , taking input from the user , using prompt*/
+
+var l=prompt("length");
+var b=prompt('breadth');
+var area=l*b;
+var peri=2*(parseInt(l)+parseInt(b));
+console.log("area: "+ area+ " peri: "+ peri);
+VM1274:7 area: 300 peri: 80
+undefined
+
+
+/*4.WAP to rotate the string ‘brainmentors in the right direction. This is done by periodically removing one letter from the string end and attaching it to the front. 
+input  = brainmentors output = sbrainmentor*/
+
+function right(s) {
+    s=s.split('');
+    var b=s[s.length -1];
+    s.pop();
+    s.unshift(b);
+    console.log(s.join(''));
+}
+right('shravya');
+VM1289:9 ashravy
+undefined
+
+/*5.WAP to find out if 1st January will be a Sunday between 2000 and 2030
+*/
+    
+function check() {
+    for(i=2000;i<=2030;i++){
+        var d=new Date(i,1,1);
+        var e=d.getDay();
+        if(e==0){
+        console.log(i);}
+    }
+}
+undefined
+check();
+VM1299:9 2004
+VM1299:9 2009
+VM1299:9 2015
+VM1299:9 2026
+undefined
