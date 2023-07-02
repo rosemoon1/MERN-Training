@@ -1,0 +1,86 @@
+/*1.Write a function calculate that takes three arugments from the user, say num1 , num2, and operation(1==add, 2==subtract, 
+3==multiply, 4==divide ).Don`t use switch statement or if else statements
+1.add,
+2.subtract,
+3.multiply,
+4.divide 
+write the calc function for all the operations*/
+function cal() {
+   function add(n1,n2){return n1+n2;}
+   function sub(n1,n2){return n1-n2;}
+   function mul(n1,n2){return n1*n2;}
+   function div(n1,n2){return n1/n2;}
+   return [add,sub,mul,div];
+}
+undefined
+cal()[2](5,4)
+20
+cal()[0](5,4)
+9
+cal()[1](5,4)
+1
+
+
+/*Create a function Named Triangle which takes 3 parameters, say A, B and C denoting the 3 sides of a triangle.
+Use Callback function, create a method to check if the triangle is Equilateral or not.
+Output:
+"true" if the triangle is equilateral and "false" if its not.*/
+undefined
+function triangle(a,b,c,fun) {
+    console.log(fun(a,b,c));
+}
+function fun(a,b,c) {
+    if(a==b && b==c) return 'true';
+    else return 'false';
+}
+undefined
+triangle(3,4,5,fun);
+VM533:2 false
+undefined
+triangle(5,5,5,fun);
+VM533:2 true
+undefined
+
+
+/*Given two strings, return true if they are anagrams of one another
+For example: Mary is an anagram of Army*/
+function check(s='',l='') {
+    var a=s.split('').reverse().join('');
+    if(a===l){
+        return "true";
+    }
+    else return "false";
+}
+undefined
+check('shravya','ayvarhs');
+'true'
+check('shravya','ayvauhs');
+'false'
+
+
+/*Create a function Employee, having id, name, basic_Salary as arguments.
+Compute HRA, DA, TA, GS, NS.*/
+function employee(n='',s=0) {
+    var h=0.30*s;
+    var d=0.10*s;
+    var t=0.20*s;
+    var g=s+h+d+t;
+    var nus=g-(0.10*g);
+    console.log(n +": hra = "+h+', ds ='+d+',ta='+t+',gs='+g+',ns='+nus);
+}
+undefined
+employee('SHARVYA',100);
+VM1549:10 SHARVYA: hra = 30, ds =10,ta=20,gs=160,ns=144
+
+
+/*Write a function to find the maximum and minimum elements in an array.*/
+var arr=[10,3,15,-1,9,6];
+function find() {
+    arr.sort(function(a,b){return a-b});
+    //ascending
+    console.log('max: '+arr[arr.length -1]+'min: '+ arr[0]);
+}
+undefined
+find();
+VM1919:5 max: 15min: -1
+undefined
