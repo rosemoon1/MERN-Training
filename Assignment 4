@@ -1,0 +1,121 @@
+/*1.Find Occurance of a target value in given array; arr= [19, 22, 18, 19, 16, 18, 19, 21, 24]; target = 19;*/
+var arr=[19,22,18,19,16,18,19,21,24];
+undefined
+var a=arr.filter(e=>e==19);
+undefined
+a.length;
+3
+a;
+(3) [19, 19, 19]
+
+
+
+/*2.Reverse a given string using reverse() method input = "BrainMentors" output = "srotnemniarB"*/
+
+var arr=prompt('enter string');
+var a=arr.split('');
+
+undefined
+a;
+(7) ['s', 'h', 'r', 'a', 'v', 'y', 'a']
+a=a.reverse();
+(7) ['a', 'y', 'v', 'a', 'r', 'h', 's']
+console.log(a.join(''));
+VM689:1 ayvarhs
+
+
+/*3.Write a function that takes a string as input and returns the number of vowels (a, e, i, o, u) in the string. 
+Count of vowels in string; ex:- str = "brainmentors" output: count = 4*/
+
+var arr="brainmentors";
+undefined
+var a=arr.split('');
+undefined
+a;
+(12) ['b', 'r', 'a', 'i', 'n', 'm', 'e', 'n', 't', 'o', 'r', 's']
+var f=a.filter(ele=>(ele=='a' && ele=='e' && ele=='i' && ele=='o'&& ele=='u'));
+undefined
+f;
+[]
+var f=a.filter(ele=>ele=='a' && ele=='e' && ele=='i' && ele=='o'&& ele=='u');
+undefined
+f
+[]
+var f=a.filter(ele=>ele=='a' || ele=='e' || ele=='i' || ele=='o'|| ele=='u');
+undefined
+f;
+(4) ['a', 'i', 'e', 'o']
+console.log(f.length);
+VM609:1 4
+Undefined
+
+
+
+/*4.Write a function to find the sum of all elements in an array. 
+ex:- arr = [1,2,3,4,5]; output = 15;*/
+
+var arr=[10,20,30,40,50];
+undefined
+var a=arr.reduce((acc,e)=>acc+e);
+undefined
+a;
+150
+
+
+/*5.Write a function to reverse the order of elements in an array. don't Use reverse() Method ex:- var arr = ['a','b','c','d','e','f'] 
+output = ['f','e','d','c','b','a']*/
+
+var w='';
+function rev(str) {
+    for(i=str.length;i>=0;i--)
+        {
+            w=w+str[i];
+        }
+    console.log(w.split(''));
+}
+
+
+
+/*6.Write a function to remove a specific element from an array. arr = [1,2,3,4,5]; remove = 3 output :- [1,2,4,5]*/
+
+var arr=[1,2,3,4,5,6,7,8,9];
+undefined
+var n=prompt();
+arr=arr.filter(ele=>ele!=n);
+(8) [1, 2, 3, 5, 6, 7, 8, 9]
+
+
+
+
+/*7.Write a function to find the second largest number in an array.
+
+ex:- var arr = [12,4,6,9,2,15,3,9];
+		
+		output second largest : 12*/
+
+var arr=[1,2,3,4,5,67,4,8,9];
+undefined
+arr=arr.sort();
+(9) [1, 2, 3, 4, 4, 5, 67, 8, 9]
+arr=arr.sort(function(a,b){return b-a});
+(9) [67, 9, 8, 5, 4, 4, 3, 2, 1]
+console.log(arr[2]);
+VM237:1 8
+
+
+
+
+/*9.Write a function to find the intersection of two arrays (common elements between the two arrays).
+
+ex:- arr1 = [2,4,1,7,4,2] , arr2 = [5,1,4,7,3,1];
+
+output = [1,4,7]
+*/
+
+var a1=[1,2,3,4,5];
+var a2=[3,4,5,6];
+undefined
+var incl=a1.filter(e=>a2.find(el=>el==e));
+undefined
+incl;
+(3) [3, 4, 5]
